@@ -5,12 +5,12 @@
   "author": "Cameron Eldridge",
   "license": "ISC",
   "exports": {
-    "./Image.svelte": "./src/Image/index.svelte",
-    "./ImageProvider.svelte": "./src/Image/ImageProvider.svelte",
-    "./Text.svelte": "./src/Text/index.svelte",
-    "./Link.svelte": "./src/Link/index.svelte",
-    "./Paper.svelte": "./src/Paper/index.svelte",
-    "./Rule.svelte": "./src/Rule/index.svelte"
+    "./Image.svelte": "./src/Image.svelte",
+    "./ImageProvider.svelte": "./src/ImageProvider.svelte",
+    "./Text.svelte": "./src/Text.svelte",
+    "./Link.svelte": "./src/Link.svelte",
+    "./Paper.svelte": "./src/Paper.svelte",
+    "./Rule.svelte": "./src/Rule.svelte"
   },
   "devDependencies": {
     "svelte": "^3.38.3"
