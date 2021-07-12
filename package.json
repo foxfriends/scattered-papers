@@ -2,9 +2,16 @@
   "name": "scattered-papers",
   "version": "1.0.0",
   "description": "Svelte components for my personal websites, designed to look like scattered papers.",
-  "main": "index.js",
   "author": "Cameron Eldridge",
   "license": "ISC",
+  "exports": {
+    "./Image.svelte": "./src/Image/index.svelte",
+    "./ImageProvider.svelte": "./src/Image/ImageProvider.svelte",
+    "./Text.svelte": "./src/Text/index.svelte",
+    "./Link.svelte": "./src/Link/index.svelte",
+    "./Paper.svelte": "./src/Paper/index.svelte",
+    "./Rule.svelte": "./src/Rule/index.svelte"
+  },
   "devDependencies": {
     "svelte": "^3.38.3"
   }
