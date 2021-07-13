@@ -52,9 +52,13 @@
 -->
 
 <script>
-  import { useImages } from './ImageProvider.svelte';
-
-  const images = useImages();
+//  import { useImages } from './ImageProvider.svelte';
+//
+//  const images = useImages();
+  const images = Object
+    .fromEntries(Object
+      .entries(import.meta.globEager('../image/**/*.{png,svg}'))
+      .map(([path, value]) => [path.slice('../image/'.length), value]));
 
   export let name;
   export let type = 'svg';

@@ -4,13 +4,18 @@
   "description": "Svelte components for my personal websites, designed to look like scattered papers.",
   "author": "Cameron Eldridge",
   "license": "ISC",
+  "scripts": {
+    "prepare": "git submodule update --init --recursive"
+  },
   "exports": {
     "./Image.svelte": "./src/Image.svelte",
     "./ImageProvider.svelte": "./src/ImageProvider.svelte",
     "./Text.svelte": "./src/Text.svelte",
     "./Link.svelte": "./src/Link.svelte",
     "./Paper.svelte": "./src/Paper.svelte",
-    "./Rule.svelte": "./src/Rule.svelte"
+    "./Rule.svelte": "./src/Rule.svelte",
+    "./papers.css": "./papers.css",
+    "./image": "./image"
   },
   "devDependencies": {
     "svelte": "^3.38.3"
