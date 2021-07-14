@@ -4,8 +4,9 @@
 
 <style>
   .content {
+    --space: var(--Content--outer-space, 10rem);
     box-sizing: border-box;
-    padding: 10rem 0;
+    padding: var(--space) 0;
     font-family: var(--font-body);
   }
 
@@ -39,7 +40,7 @@
   .content > :global(ol),
   .content :global(blockquote),
   .content :global(figure) {
-    margin: 1rem 10rem 0;
+    margin: 1rem var(--space) 0;
   }
 
   /** inlines */
