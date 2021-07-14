@@ -8,6 +8,7 @@
     "prepare": "git submodule update --init --recursive"
   },
   "exports": {
+    "./Content.svelte": "./src/Content.svelte",
     "./Image.svelte": "./src/Image.svelte",
     "./ImageProvider.svelte": "./src/ImageProvider.svelte",
     "./Text.svelte": "./src/Text.svelte",
