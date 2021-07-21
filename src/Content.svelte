@@ -224,7 +224,7 @@
   /** Quotes */
 
   .content :global(blockquote) {
-    margin-left: 11rem;
+    margin-left: calc(var(--space) + 1rem);
     padding-left: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
