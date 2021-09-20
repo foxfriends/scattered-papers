@@ -13,6 +13,7 @@
     "./Paper.svelte": "./src/Paper.svelte",
     "./Rule.svelte": "./src/Rule.svelte",
     "./papers.css": "./papers.css",
+    "./fonts.css": "./fonts.css",
     "./image": "./image"
   },
   "devDependencies": {
