@@ -1,6 +1,6 @@
 :root {
   /* variable declarations */
-  --font-display: var(--ScatteredPapers--font-display, 'Vollkorn', serif)
+  --font-display: var(--ScatteredPapers--font-display, 'Vollkorn', serif);
   --font-mono: var(--ScatteredPapers--font-mono, 'Fira Code', monospace);
   --font-body: var(--ScatteredPapers--font-body, 'Spectral', serif);
   --font-accent: var(--ScatteredPapers--font-accent, 'Spectral SC', serif);
