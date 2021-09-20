@@ -4,9 +4,6 @@
   "description": "Svelte components for my personal websites, designed to look like scattered papers.",
   "author": "Cameron Eldridge",
   "license": "ISC",
-  "scripts": {
-    "prepare": "git submodule update --init --recursive"
-  },
   "exports": {
     "./Content.svelte": "./src/Content.svelte",
     "./Image.svelte": "./src/Image.svelte",
