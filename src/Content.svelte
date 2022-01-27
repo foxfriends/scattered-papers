@@ -232,11 +232,11 @@
   }
 
   .content :global(blockquote p:first-child) {
-    text-indent: 0;
+    margin-top: 0;
   }
 
   .content :global(blockquote p) {
-    margin: 0;
+    margin-left: 0;
   }
 
   .content :global(a:link),
