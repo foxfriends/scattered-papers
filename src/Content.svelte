@@ -237,6 +237,7 @@
 
   .content :global(blockquote p) {
     margin-left: 0;
+    margin-right: 0;
   }
 
   .content :global(a:link),
