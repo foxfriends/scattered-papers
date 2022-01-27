@@ -231,11 +231,11 @@
     border-left: 3px groove rgba(0, 0, 0, 0.5);
   }
 
-  .content :global(blockquote p) {
+  .content :global(blockquote p:first-child) {
     text-indent: 0;
   }
 
-  .content :global(blockquote p:first-child) {
+  .content :global(blockquote p) {
     margin: 0;
   }
 
