@@ -144,7 +144,8 @@
     border: none;
     height: 1px;
     width: 14rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--rule--color);
+    opacity: 0.5;
     margin: 2rem auto;
   }
 
