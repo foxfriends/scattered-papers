@@ -53,7 +53,9 @@
  *  is dark mode really worth it? good textures are hard to find in dark
  *  might need to at least take a different approach to darkening the scene than just using dark images
  *  -> turned the lights off type effect instead? reading light effect on the papers?
- */
+ *
+ * Going to disable this for now, I don't like it.
+ *
 @media (prefers-color-scheme: dark) {
   :root {
     --color-ink: white;
@@ -64,14 +66,11 @@
     --image-table: url('./image/dark/back/back@2.png');
 
     /** Component settings */
-    /* Paper */
+    /* Paper *!/
     --paper--image: url('./image/dark/paper.png');
   }
 }
-
-@media (min-width: 2561px) {
-  :root { --font-size-body: 14pt; }
-}
+*/
 
 @media (min-width: 701px) {
   body { background-attachment: fixed; }
