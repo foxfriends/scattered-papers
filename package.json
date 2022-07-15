@@ -17,6 +17,6 @@
     "./image": "./image"
   },
   "devDependencies": {
-    "svelte": "^3.38.3"
+    "svelte": "^3.49.0"
   }
 }
