@@ -12,11 +12,11 @@
 
   /** paragraphs */
 
-  .content :global(p + p) {
+  .content > :global(p + p) {
     text-indent: 1em;
   }
 
-  .content :global(* + *) {
+  .content > :global(* + *) {
     margin-top: 1rem;
   }
 
