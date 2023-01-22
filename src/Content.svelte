@@ -20,7 +20,7 @@
     margin-top: 1rem;
   }
 
-  .content > :global(li > * + *) {
+  .content :global(li > * + *) {
     margin-top: 0.5rem;
   }
 
