@@ -16,31 +16,18 @@
     text-indent: 1em;
   }
 
-  .content :global(p),
-  .content :global(h3),
-  .content :global(h4),
-  .content :global(h5),
-  .content :global(h6),
-  .content :global(dl),
-  .content > :global(ul),
-  .content > :global(ol),
-  .content :global(blockquote),
-  .content :global(pre),
-  .content :global(figure) {
+  .content :global(* + *) {
     margin-top: 1rem;
   }
 
-  .content :global(p),
-  .content :global(h3),
-  .content :global(h4),
-  .content :global(h5),
-  .content :global(h6),
-  .content :global(dl),
-  .content > :global(ul),
-  .content > :global(ol),
-  .content :global(blockquote),
-  .content :global(figure) {
-    margin: 1rem var(--space) 0;
+  .content > :global(*) {
+    margin-left: var(--space);
+    margin-right: var(--space);
+  }
+
+  .content > :global(div) {
+    margin-left: unset;
+    margin-right: unset;
   }
 
   /** inlines */
