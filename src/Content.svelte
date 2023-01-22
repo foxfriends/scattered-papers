@@ -20,6 +20,10 @@
     margin-top: 1rem;
   }
 
+  .content > :global(li > * + *) {
+    margin-top: 0.5rem;
+  }
+
   .content > :global(*) {
     margin-left: var(--space);
     margin-right: var(--space);
