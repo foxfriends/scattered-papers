@@ -54,11 +54,11 @@
   }
 
   .content :global(pre),
-  .content :global(:not(pre) code) {
-    font-size: 0.85em;
+  .content :global(:not(pre) > code) {
+    font-size: 0.85rem;
   }
 
-  .content :global(:not(pre) code) {
+  .content :global(:not(pre) > code) {
     padding: 0 0.2rem;
   }
 
