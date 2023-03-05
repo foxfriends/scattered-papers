@@ -55,7 +55,7 @@
 
   .content :global(pre),
   .content :global(:not(pre) > code) {
-    font-size: 0.85rem;
+    font-size: 0.85em;
   }
 
   .content :global(:not(pre) > code) {
