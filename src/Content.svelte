@@ -163,7 +163,7 @@
 
   .content :global(li::before) {
     /* base.css styles lists a bit different, so we have to revert that */
-    content: '';
+    content: unset;
   }
 
   .content :global(ol > li) {
