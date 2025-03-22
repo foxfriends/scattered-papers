@@ -1,4 +1,4 @@
-<div class='content'>
+<div class="content">
   <slot />
 </div>
 
@@ -182,7 +182,7 @@
   }
 
   .content :global(dt::before) {
-    content: 'Def. ';
+    content: "Def. ";
     font-family: var(--font-accent);
     text-transform: lowercase;
     font-size: 0.85em;
@@ -199,15 +199,21 @@
   .content :global(pre) {
     position: relative;
     padding: 1em;
-    width: 80ch;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--color__one-dark--black);
     color: var(--color__one-dark--white);
+    overflow-x: auto;
+  }
+
+  .content :global(pre code) {
+    display: block;
+    width: 80ch;
   }
 
   .content :global(pre code::after) {
-    position: absolute;
+    position: sticky;
     content: attr(data-language);
     right: 2em;
     bottom: 0em;
