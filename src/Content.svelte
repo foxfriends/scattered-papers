@@ -213,7 +213,7 @@
   }
 
   .content :global(pre code::after) {
-    position: sticky;
+    position: absolute;
     content: attr(data-language);
     right: 2em;
     bottom: 0em;
