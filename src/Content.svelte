@@ -242,13 +242,15 @@
   .content :global(a:visited),
   .content :global(a:active) {
     color: var(--link--color);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: color(from var(--link--color) srgb r g b / 0.3);
   }
 
   .content :global(a:focus),
   .content :global(a:hover) {
     color: var(--link--color-hover);
     text-decoration: underline;
+    text-decoration-color: var(--link--color-hover);
   }
 
   /** Tables */
