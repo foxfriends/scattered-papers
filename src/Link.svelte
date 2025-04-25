@@ -21,12 +21,21 @@
   *   `click`: Emitted when the link content is clicked.
 -->
 <script>
-  export let href = undefined;
-  export let external = undefined;
-  export let download = undefined;
-  export let discreet = undefined;
+  const {
+    href = undefined,
+    external = undefined,
+    download = undefined,
+    discreet = undefined,
+    children,
+    onclick = undefined,
+  } = $props();
 
-  $: target = external ? '_blank' : undefined;
+  const target = $derived(external ? "_blank" : undefined);
+
+  function doOnClick(e) {
+    e.stopPropagation();
+    onclick();
+  }
 </script>
 
 <!--
@@ -36,12 +45,18 @@
 -->
 
 {#if href}
-  <a on:click|stopPropagation {href} {target} {download} class='link {discreet ? 'discreet' : ''}'>
-    <slot />
+  <a
+    onclick={onclick ? doOnClick : undefined}
+    {href}
+    {target}
+    {download}
+    class="link {discreet ? 'discreet' : ''}"
+  >
+    {@render children()}
   </a>
 {:else}
-  <div on:click|stopPropagation class='link {discreet ? 'discreet' : ''}'>
-    <slot />
+  <div onclick={onclick ? doOnClick : undefined} class="link {discreet ? 'discreet' : ''}">
+    {@render children()}
   </div>
 {/if}
 
@@ -57,12 +72,15 @@
     cursor: pointer;
   }
 
-  .link:link, .link:visited, .link:active {
+  .link:link,
+  .link:visited,
+  .link:active {
     color: var(--link--color);
     text-decoration: none;
   }
 
-  .link:hover, .link:focus {
+  .link:hover,
+  .link:focus {
     color: var(--link--color-hover);
     text-decoration: underline;
   }

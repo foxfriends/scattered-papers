@@ -28,16 +28,16 @@
   ```
 -->
 
-<script context='module'>
-  import { writable } from 'svelte/store';
-  const media = window.matchMedia('(prefers-color-scheme: dark)');
+<script module>
+  import { writable } from "svelte/store";
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
   const darkMode = writable(media.matches);
   media.addListener(({ matches }) => darkMode.set(matches));
 
   const cachedImages = {};
   function retrieve(src) {
     if (!cachedImages[src]) {
-      cachedImages[src] = fetch(src).then(image => image.text());
+      cachedImages[src] = fetch(src).then((image) => image.text());
     }
     return cachedImages[src];
   }
@@ -52,30 +52,29 @@
 -->
 
 <script>
-//  import { useImages } from './ImageProvider.svelte';
-//
-//  const images = useImages();
-  const images = Object
-    .fromEntries(Object
-      .entries(import.meta.glob('../image/**/*.{png,svg}', { eager: true }))
-      .map(([path, value]) => [path.slice('../image/'.length), value]));
+  const images = Object.fromEntries(
+    Object.entries(import.meta.glob("../image/**/*.{png,svg}", { eager: true })).map(
+      ([path, value]) => [path.slice("../image/".length), value],
+    ),
+  );
 
-  export let name;
-  export let type = 'svg';
-  export let alt;
+  let { name, type = "svg", alt } = $props();
 
-  $: src = images[`${$darkMode ? 'dark/' : ''}${name}.${type}`]?.default ?? images[`${name}.${type}`]?.default;
-  $: imageDownload = retrieve(src);
+  const src = $derived(
+    images[`${$darkMode ? "dark/" : ""}${name}.${type}`]?.default ??
+      images[`${name}.${type}`]?.default,
+  );
+  const imageDownload = $derived(retrieve(src));
 </script>
 
-{#if type === 'svg'}
-  <div class='svg'>
+{#if type === "svg"}
+  <div class="svg">
     {#await imageDownload then image}
       {@html image}
     {/await}
   </div>
 {:else}
-  <img {src} alt={alt || name} class='image {type}' />
+  <img {src} alt={alt || name} class="image {type}" />
 {/if}
 
 <style>

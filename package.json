@@ -4,6 +4,7 @@
   "description": "Svelte components for my personal websites, designed to look like scattered papers.",
   "author": "Cameron Eldridge",
   "license": "ISC",
+  "type": "module",
   "exports": {
     "./Content.svelte": "./src/Content.svelte",
     "./Image.svelte": "./src/Image.svelte",
@@ -16,7 +17,11 @@
     "./fonts.css": "./fonts.css",
     "./image": "./image"
   },
+  "peerDependencies": {
+    "svelte": "^5.28.2"
+  },
   "devDependencies": {
-    "svelte": "^4.2.19"
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3"
   }
 }

@@ -1,6 +1,6 @@
 <!--
   # Rule
-  
+
   The `Rule` component renders a straight line, expanding to fill its parent container's width.
 
   ## Usage
@@ -15,14 +15,16 @@
 -->
 
 <script>
-  export let fade = false;
-  $: classes = Object.entries({ rule: true, fade })
-    .filter(([, include]) => include)
-    .map(([name]) => name)
-    .join(' ');
+  const { fade = false } = $props();
+  const classes = $derived(
+    Object.entries({ rule: true, fade })
+      .filter(([, include]) => include)
+      .map(([name]) => name)
+      .join(" "),
+  );
 </script>
 
-<div class={classes} />
+<div class={classes}></div>
 
 <!--
   ## Styles
@@ -41,10 +43,6 @@
 
   .fade {
     background-color: unset;
-    background-image: linear-gradient(to right, 
-      transparent, 
-      var(--rule--color) 50%, 
-      transparent
-    );
+    background-image: linear-gradient(to right, transparent, var(--rule--color) 50%, transparent);
   }
 </style>

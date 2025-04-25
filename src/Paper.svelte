@@ -21,7 +21,7 @@
 -->
 
 <script>
-  export let hmargin = '0', vmargin = '0';
+  const { hmargin = "0", vmargin = "0", children } = $props();
 </script>
 
 <!--
@@ -30,8 +30,8 @@
   *   `default`: The contents of the paper.
 -->
 
-<div class='paper' style='padding: {vmargin} {hmargin}'>
-  <slot></slot>
+<div class="paper" style="padding: {vmargin} {hmargin}">
+  {@render children()}
 </div>
 
 <!--
@@ -49,7 +49,7 @@
     height: 100%;
 
     position: relative;
-    background-color: var(--paper--color, #FAFAFA);
+    background-color: var(--paper--color, #fafafa);
     background-image: var(--paper--image);
     box-shadow: var(--paper--shadow, 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.6));
   }

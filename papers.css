@@ -1,12 +1,12 @@
 :root {
   /* variable declarations */
-  --font-display: var(--ScatteredPapers--font-display, 'Vollkorn', serif);
-  --font-mono: var(--ScatteredPapers--font-mono, 'Fira Code', monospace);
-  --font-body: var(--ScatteredPapers--font-body, 'Spectral', serif);
-  --font-accent: var(--ScatteredPapers--font-accent, 'Spectral SC', serif);
+  --font-display: var(--ScatteredPapers--font-display, "Vollkorn", serif);
+  --font-mono: var(--ScatteredPapers--font-mono, "Fira Code", monospace);
+  --font-body: var(--ScatteredPapers--font-body, "Spectral", serif);
+  --font-accent: var(--ScatteredPapers--font-accent, "Spectral SC", serif);
 
   --color-ink: rgba(0, 0, 0, 0.98);
-  --color-ink-light: rgba(0, 0, 0, 0.70);
+  --color-ink-light: rgba(0, 0, 0, 0.7);
   --color-link: rgba(0, 0, 0, 0.65);
   --color-link-hover: var(--color-ink);
 
@@ -22,7 +22,7 @@
   --color__one-dark--string: #98c379;
 
   /* TODO: find a better background image */
-  --image-table: url('./image/wood.jpg');
+  --image-table: url("./image/wood.jpg");
 
   --font-size-title: 1.5rem;
   --font-size-subtitle: 1.3rem;
@@ -33,7 +33,7 @@
 
   /** Component settings */
   /* Paper */
-  --paper--image: url('./image/paper.png');
+  --paper--image: url("./image/paper.png");
   /* Rule */
   --rule--color: var(--color-ink);
   /* Text */
@@ -66,14 +66,16 @@
     --image-table: url('./image/dark/back/back@2.png');
 
     /** Component settings */
-    /* Paper *!/
+/* Paper *!/
     --paper--image: url('./image/dark/paper.png');
   }
 }
 */
 
 @media (min-width: 701px) {
-  body { background-attachment: fixed; }
+  body {
+    background-attachment: fixed;
+  }
 }
 
 body {
@@ -84,9 +86,17 @@ body {
   color: var(--color-ink);
 }
 
-#app { overflow: auto; }
+#app {
+  overflow: auto;
+}
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   all: unset;
   display: block;
 }
@@ -97,7 +107,7 @@ li {
 }
 
 ul li::before {
-  content: '·';
+  content: "·";
   position: absolute;
   left: -0.5em;
   top: 50%;

@@ -20,15 +20,20 @@
 -->
 
 <script>
-  export let heading = false;
-  export let mono = false;
-  export let accent = false;
-  export let sc = false;
-  export let semibold = false;
-  $: classes = Object.entries({ text: true, heading, mono, accent, sc, semibold })
-    .filter(([, include]) => include)
-    .map(([name]) => name)
-    .join(' ');
+  const {
+    heading = false,
+    mono = false,
+    accent = false,
+    sc = false,
+    semibold = false,
+    children,
+  } = $props();
+  const classes = $derived(
+    Object.entries({ text: true, heading, mono, accent, sc, semibold })
+      .filter(([, include]) => include)
+      .map(([name]) => name)
+      .join(" "),
+  );
 </script>
 
 <!--
@@ -39,14 +44,13 @@
 
 {#if heading}
   <h1 class={classes}>
-    <slot />
+    {@render children()}
   </h1>
 {:else}
   <span class={classes}>
-    <slot />
+    {@render children()}
   </span>
 {/if}
-
 
 <!--
   ## Styles
