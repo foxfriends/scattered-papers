@@ -34,7 +34,7 @@
 
   function doOnClick(e) {
     e.stopPropagation();
-    onclick();
+    onclick(e);
   }
 </script>
 
