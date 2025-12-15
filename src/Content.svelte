@@ -16,7 +16,7 @@
 
   /** paragraphs */
 
-  .content > :global(p + p) {
+  .content :global(p + p) {
     text-indent: 1em;
   }
 
@@ -241,6 +241,12 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  .content > :global(blockquote * + *) {
+    margin-top: 1rem;
+  }
+
+  /** Links */
 
   .content :global(a:link),
   .content :global(a:visited),
